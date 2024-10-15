@@ -1,82 +1,29 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-}
-
-body{
-    height: 100vh;
-    background-color: grey;
+    padding: 0;
+    margin: 0;
     font-family: Poppins, sans-serif;
 }
+/* Generall css */
+header{
+    width: 100%;
+    display: flex;
+}
 
+/* Add gradient */
+.name{
+    color: black;
+    font-size: 1.2rem;
+}
 
 ul{
-    list-style: none;
+    list-style-type: none;
 }
 
-h2{
-    color: blueviolet;
-    font-size: 1.5em;
-}
-
-ul a{
+ul li a{
     text-decoration: none;
     color: black;
-    font-size: 1.125em;
 }
-
-@media (max-width: 600px) {
-
-    nav{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    ul{
-        display: flex;
-    }
-
-    .menu{
-        flex-direction: column;
-        align-items: center;
-        row-gap: 0.5em;
-    }
-
-    .icons{
-        justify-content:center;
-        justify-content: space-evenly;
-        
-    }
-
-  }
-
-  @media (min-width:601px){
-    
-    nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .name{
-        flex-grow: 1;
-        
-    }
-
-    ul{
-        display: flex;
-        
-    }
-
-    
-    
-    
-
-  }
-
 
 /* Social media icon effect */
 .twitter a:hover{
@@ -91,21 +38,90 @@ ul a{
     color: orangered;
 }
 
+/* site information */ 
 
-
-
-
-
-/*
-.icons{
+main{
     display: flex;
-    column-gap: 3em;
+
 }
 
-.icons li{
-    list-style-type: none;
+
+/* Moblie layout */
+@media (max-width: 635px) {
+
+    header{
+        flex-direction: column;
+    }
+
+    .name{
+        margin: 7% 0 20px 7%;
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .icons{
+        flex-direction: row;
+        column-gap: 100px;
+    
+        font-size: 1.5rem;
+    }
+
+    main{
+        margin-top: 10%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
 
-.icons li a{
-    color: black;
+@media (min-width: 636px) {
+
+    header{
+        justify-content: flex-end;
+        align-items: center;
+        padding: 7%;
+    }
+
+    .name{
+        margin-right: auto;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+
+    .menu{
+        column-gap: 30px;
+        margin-right: 30px;
+    }
+
+    .icons{
+        font-size: 1.2rem;
+        column-gap: 12px;
+    }
+
+    main{
+        justify-content: center;
+        justify-content: space-evenly;
+
+        margin-top: 10%;
+    }
+
+    .home-h1{
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
